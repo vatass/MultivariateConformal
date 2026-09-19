@@ -1,0 +1,5 @@
+model,fold,biomarker,target_index,fit_observations,fit_subjects,calibration_observations,calibration_subjects_with_biomarker,test_observations,test_subjects_with_biomarker,outcome_scale,training_seconds
+dqr,0,hippocampus_right,13,7421,1656,1894,414,1034,230,1.0052136182785034,1.1174006462097168
+dqr,0,hippocampus_left,14,7421,1656,1894,414,1034,230,1.0048317909240723,1.1221458911895752
+dqr,0,ventricle_right,17,7421,1656,1894,414,1034,230,0.9937435984611511,1.117149829864502
+dqr,0,ventricle_left,18,7421,1656,1894,414,1034,230,0.9955119490623474,1.124547004699707

@@ -1,0 +1,10 @@
+model,fold,method,biomarker,alpha_used,qhat,rank,n_calibration_subjects
+gam,0,single_cp,hippocampus_right,0.1,3.615394008011624,374,414
+gam,0,bonferroni_cp,hippocampus_right,0.025,5.430709258277938,405,414
+gam,0,single_cp,hippocampus_left,0.1,3.5668896590117325,374,414
+gam,0,bonferroni_cp,hippocampus_left,0.025,7.18627481117414,405,414
+gam,0,single_cp,ventricle_right,0.1,3.5114628101282146,374,414
+gam,0,bonferroni_cp,ventricle_right,0.025,6.111320137988316,405,414
+gam,0,single_cp,ventricle_left,0.1,3.399128463389645,374,414
+gam,0,bonferroni_cp,ventricle_left,0.025,7.20062141091427,405,414
+gam,0,joint_cp,ALL,0.1,4.856753878358359,374,414

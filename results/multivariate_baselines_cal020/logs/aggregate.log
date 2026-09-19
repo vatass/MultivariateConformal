@@ -1,0 +1,23 @@
+Saved: /home/cbica/Desktop/MultivariateConformal/results/multivariate_baselines_cal020/all_models_overall_metrics.csv
+Saved: /home/cbica/Desktop/MultivariateConformal/results/multivariate_baselines_cal020/all_models_fold_metrics.csv
+Saved: /home/cbica/Desktop/MultivariateConformal/results/multivariate_baselines_cal020/all_models_runtime_and_counts.csv
+Saved: /home/cbica/Desktop/MultivariateConformal/results/multivariate_baselines_cal020/all_models_joint_summary.csv
+
+Joint summary:
+model        method biomarker scope  coverage_mean  coverage_std  normalized_width_mean  normalized_width_std  folds
+  gam bonferroni_cp ALL_JOINT joint       0.943478      0.019117               1.798030              0.137678     10
+  dqr bonferroni_cp ALL_JOINT joint       0.932609      0.016041               1.728369              0.112074     10
+  mlp bonferroni_cp ALL_JOINT joint       0.928261      0.022193               1.805301              0.109141     10
+ drmc bonferroni_cp ALL_JOINT joint       0.922174      0.021344               2.049691              0.166089     10
+  dqr      joint_cp ALL_JOINT joint       0.908696      0.019007               1.540837              0.067933     10
+  mlp      joint_cp ALL_JOINT joint       0.901304      0.034360               1.709647              0.079142     10
+  gam      joint_cp ALL_JOINT joint       0.900435      0.020542               1.366760              0.082310     10
+ drmc      joint_cp ALL_JOINT joint       0.898696      0.022920               1.970346              0.192615     10
+  dqr           raw ALL_JOINT joint       0.275217      0.047053               0.702524              0.054176     10
+  gam           raw ALL_JOINT joint       0.251739      0.031046               0.434278              0.004507     10
+ drmc           raw ALL_JOINT joint       0.050870      0.023552               0.450013              0.021340     10
+  mlp           raw ALL_JOINT joint       0.007391      0.007115               0.228258              0.017794     10
+  gam     single_cp ALL_JOINT joint       0.793478      0.029930               0.968182              0.037039     10
+  mlp     single_cp ALL_JOINT joint       0.744348      0.027711               1.125125              0.040718     10
+  dqr     single_cp ALL_JOINT joint       0.731739      0.016783               1.111485              0.028934     10
+ drmc     single_cp ALL_JOINT joint       0.720000      0.027666               1.303518              0.063013     10

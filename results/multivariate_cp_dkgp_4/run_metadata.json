@@ -1,0 +1,30 @@
+{
+  "data_file": "../ConformalBiomarkerTrajectories/data/data.csv",
+  "folds_dir": "../ConformalBiomarkerTrajectories/data/folds",
+  "biomarkers": {
+    "hippocampus_right": 13,
+    "hippocampus_left": 14,
+    "ventricle_right": 17,
+    "ventricle_left": 18
+  },
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "bonferroni_alpha_per_biomarker": 0.025,
+  "calibration_fraction": 0.02,
+  "uncertainty": "epistemic",
+  "std_floor": 1e-06,
+  "seed": 42,
+  "fold_start": 0,
+  "n_folds": 10,
+  "model_config": {
+    "iterations": 100,
+    "learning_rate": 0.02,
+    "weight_decay": 0.1,
+    "dropout": 0.2,
+    "activation": "relu",
+    "kernel": "RBF",
+    "mean": "Constant"
+  },
+  "device": "cuda:0",
+  "runtime_seconds": 934.1438343524933
+}

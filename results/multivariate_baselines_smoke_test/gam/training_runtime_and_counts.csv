@@ -1,0 +1,5 @@
+model,fold,biomarker,target_index,fit_observations,fit_subjects,calibration_observations,calibration_subjects_with_biomarker,test_observations,test_subjects_with_biomarker,outcome_scale,training_seconds
+gam,0,hippocampus_right,13,7421,1656,1894,414,1034,230,1.0052136182785034,0.07447481155395508
+gam,0,hippocampus_left,14,7421,1656,1894,414,1034,230,1.0048317909240723,0.046323537826538086
+gam,0,ventricle_right,17,7421,1656,1894,414,1034,230,0.9937435984611511,0.05537986755371094
+gam,0,ventricle_left,18,7421,1656,1894,414,1034,230,0.9955119490623474,0.06055331230163574

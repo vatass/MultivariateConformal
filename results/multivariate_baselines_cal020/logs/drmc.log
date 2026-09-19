@@ -1,0 +1,310 @@
+[KeOps] Compiling cuda jit compiler engine ... 
+[KeOps] Warning : There were warnings or errors compiling formula :
+In file included from /home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp:21:0:
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp: In function ‘int Compile(const char*, const char*, int, int, const char*)’:
+<command-line>:0:20: error: ‘nvrtcGetCUBINSize’ was not declared in this scope
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/include/utils_pe.h:6:26: note: in definition of macro ‘NVRTC_SAFE_CALL’
+     nvrtcResult result = x;                                       \
+                          ^
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp:90:21: note: in expansion of macro ‘nvrtcGetTARGETSize’
+     NVRTC_SAFE_CALL(nvrtcGetTARGETSize(prog, &targetSize));
+                     ^~~~~~~~~~~~~~~~~~
+<command-line>:0:20: note: suggested alternative: ‘nvrtcGetPTXSize’
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/include/utils_pe.h:6:26: note: in definition of macro ‘NVRTC_SAFE_CALL’
+     nvrtcResult result = x;                                       \
+                          ^
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp:90:21: note: in expansion of macro ‘nvrtcGetTARGETSize’
+     NVRTC_SAFE_CALL(nvrtcGetTARGETSize(prog, &targetSize));
+                     ^~~~~~~~~~~~~~~~~~
+<command-line>:0:16: error: ‘nvrtcGetCUBIN’ was not declared in this scope
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/include/utils_pe.h:6:26: note: in definition of macro ‘NVRTC_SAFE_CALL’
+     nvrtcResult result = x;                                       \
+                          ^
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp:93:21: note: in expansion of macro ‘nvrtcGetTARGET’
+     NVRTC_SAFE_CALL(nvrtcGetTARGET(prog, target));
+                     ^~~~~~~~~~~~~~
+<command-line>:0:16: note: suggested alternative: ‘nvrtcGetPTX’
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/include/utils_pe.h:6:26: note: in definition of macro ‘NVRTC_SAFE_CALL’
+     nvrtcResult result = x;                                       \
+                          ^
+/home/cbica/anaconda3/envs/dk/lib/python3.8/site-packages/keopscore/binders/nvrtc/nvrtc_jit.cpp:93:21: note: in expansion of macro ‘nvrtcGetTARGET’
+     NVRTC_SAFE_CALL(nvrtcGetTARGET(prog, target));
+                     ^~~~~~~~~~~~~~
+
+OK
+Device: cuda:0
+Models: ['drmc']
+Biomarkers: {'hippocampus_right': 13, 'hippocampus_left': 14, 'ventricle_right': 17, 'ventricle_left': 18}
+Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Master subject splits: /home/cbica/Desktop/MultivariateConformal/results/multivariate_cp_dkgp_4_cal020/subject_splits.csv
+
+========================================================================================
+MODEL=drmc | FOLD=0
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.024551   374                     414
+bonferroni_cp hippocampus_right 7.066010   405                     414
+    single_cp  hippocampus_left 5.770339   374                     414
+bonferroni_cp  hippocampus_left 8.432004   405                     414
+    single_cp   ventricle_right 4.115962   374                     414
+bonferroni_cp   ventricle_right 6.107732   405                     414
+    single_cp    ventricle_left 3.680923   374                     414
+bonferroni_cp    ventricle_left 5.694313   405                     414
+     joint_cp               ALL 6.721755   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.917391               1.810445              230
+     joint_cp  0.904348               1.787938              230
+          raw  0.034783               0.437519              230
+    single_cp  0.747826               1.233060              230
+Fold runtime: 184.9 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=1
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.419477   374                     414
+bonferroni_cp hippocampus_right 7.792210   405                     414
+    single_cp  hippocampus_left 5.518780   374                     414
+bonferroni_cp  hippocampus_left 7.999441   405                     414
+    single_cp   ventricle_right 4.495879   374                     414
+bonferroni_cp   ventricle_right 6.681072   405                     414
+    single_cp    ventricle_left 4.017239   374                     414
+bonferroni_cp    ventricle_left 6.282806   405                     414
+     joint_cp               ALL 6.741705   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.891304               1.886090              230
+     joint_cp  0.860870               1.756903              230
+          raw  0.026087               0.428652              230
+    single_cp  0.678261               1.277400              230
+Fold runtime: 186.5 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=2
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.294779   374                     414
+bonferroni_cp hippocampus_right 8.138342   405                     414
+    single_cp  hippocampus_left 5.684117   374                     414
+bonferroni_cp  hippocampus_left 8.704722   405                     414
+    single_cp   ventricle_right 3.913606   374                     414
+bonferroni_cp   ventricle_right 6.169140   405                     414
+    single_cp    ventricle_left 3.906147   374                     414
+bonferroni_cp    ventricle_left 6.933861   405                     414
+     joint_cp               ALL 7.209259   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.934783               2.147600              230
+     joint_cp  0.917391               2.059106              230
+          raw  0.069565               0.469803              230
+    single_cp  0.743478               1.349418              230
+Fold runtime: 186.5 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=3
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.334418   374                     414
+bonferroni_cp hippocampus_right 8.020964   405                     414
+    single_cp  hippocampus_left 5.870301   374                     414
+bonferroni_cp  hippocampus_left 9.428250   405                     414
+    single_cp   ventricle_right 3.885057   374                     414
+bonferroni_cp   ventricle_right 6.361629   405                     414
+    single_cp    ventricle_left 3.885177   374                     414
+bonferroni_cp    ventricle_left 6.681747   405                     414
+     joint_cp               ALL 7.080152   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.913043               2.130059              230
+     joint_cp  0.878261               1.966943              230
+          raw  0.086957               0.456958              230
+    single_cp  0.678261               1.328669              230
+Fold runtime: 186.5 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=4
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.184240   374                     414
+bonferroni_cp hippocampus_right 8.173551   405                     414
+    single_cp  hippocampus_left 4.907229   374                     414
+bonferroni_cp  hippocampus_left 7.412490   405                     414
+    single_cp   ventricle_right 4.089463   374                     414
+bonferroni_cp   ventricle_right 6.603226   405                     414
+    single_cp    ventricle_left 3.844989   374                     414
+bonferroni_cp    ventricle_left 5.623530   405                     414
+     joint_cp               ALL 6.577956   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.921739               1.863790              230
+     joint_cp  0.886957               1.761827              230
+          raw  0.065217               0.440554              230
+    single_cp  0.695652               1.209607              230
+Fold runtime: 180.8 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=5
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 6.146611   374                     414
+bonferroni_cp hippocampus_right 9.493170   405                     414
+    single_cp  hippocampus_left 5.545487   374                     414
+bonferroni_cp  hippocampus_left 8.684556   405                     414
+    single_cp   ventricle_right 4.080410   374                     414
+bonferroni_cp   ventricle_right 6.142077   405                     414
+    single_cp    ventricle_left 3.826595   374                     414
+bonferroni_cp    ventricle_left 5.984958   405                     414
+     joint_cp               ALL 7.170666   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.926087               1.981574              230
+     joint_cp  0.913043               1.849410              230
+          raw  0.073913               0.424230              230
+    single_cp  0.747826               1.280450              230
+Fold runtime: 179.9 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=6
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker      qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right  5.794147   374                     414
+bonferroni_cp hippocampus_right  9.224120   405                     414
+    single_cp  hippocampus_left  6.125750   374                     414
+bonferroni_cp  hippocampus_left 11.011416   405                     414
+    single_cp   ventricle_right  3.465465   374                     414
+bonferroni_cp   ventricle_right  4.895578   405                     414
+    single_cp    ventricle_left  3.677925   374                     414
+bonferroni_cp    ventricle_left  6.140858   405                     414
+     joint_cp               ALL  7.294234   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.886957               2.142234              230
+     joint_cp  0.869565               2.042643              230
+          raw  0.021739               0.460617              230
+    single_cp  0.721739               1.313566              230
+Fold runtime: 186.5 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=7
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 4.988124   374                     414
+bonferroni_cp hippocampus_right 7.419329   405                     414
+    single_cp  hippocampus_left 5.798767   374                     414
+bonferroni_cp  hippocampus_left 9.243165   405                     414
+    single_cp   ventricle_right 3.342095   374                     414
+bonferroni_cp   ventricle_right 5.765193   405                     414
+    single_cp    ventricle_left 5.125917   374                     414
+bonferroni_cp    ventricle_left 8.808910   405                     414
+     joint_cp               ALL 7.937568   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.934783               2.320132              230
+     joint_cp  0.926087               2.384154              230
+          raw  0.030435               0.494054              230
+    single_cp  0.743478               1.435787              230
+Fold runtime: 186.4 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=8
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker      qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right  6.917531   374                     414
+bonferroni_cp hippocampus_right 10.006045   405                     414
+    single_cp  hippocampus_left  5.179015   374                     414
+bonferroni_cp  hippocampus_left  7.148648   405                     414
+    single_cp   ventricle_right  3.571515   374                     414
+bonferroni_cp   ventricle_right  6.549030   405                     414
+    single_cp    ventricle_left  4.272228   374                     414
+bonferroni_cp    ventricle_left  6.806545   405                     414
+     joint_cp               ALL  7.819535   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.939130               2.005912              230
+     joint_cp  0.917391               2.067021              230
+          raw  0.034783               0.434802              230
+    single_cp  0.713043               1.317798              230
+Fold runtime: 186.4 seconds
+
+========================================================================================
+MODEL=drmc | FOLD=9
+========================================================================================
+[1/4] hippocampus_right (Y index 13)
+[2/4] hippocampus_left (Y index 14)
+[3/4] ventricle_right (Y index 17)
+[4/4] ventricle_left (Y index 18)
+Common calibration subjects across all biomarkers: 414
+       method         biomarker     qhat  rank  n_calibration_subjects
+    single_cp hippocampus_right 5.054830   374                     414
+bonferroni_cp hippocampus_right 8.108641   405                     414
+    single_cp  hippocampus_left 5.966546   374                     414
+bonferroni_cp  hippocampus_left 9.470939   405                     414
+    single_cp   ventricle_right 3.643796   374                     414
+bonferroni_cp   ventricle_right 6.504822   405                     414
+    single_cp    ventricle_left 4.236536   374                     414
+bonferroni_cp    ventricle_left 8.152727   405                     414
+     joint_cp               ALL 7.362865   374                     414
+
+Joint test coverage:
+       method  coverage  mean_normalized_width  n_test_subjects
+bonferroni_cp  0.956522               2.209070              230
+     joint_cp  0.913043               2.027515              230
+          raw  0.065217               0.452944              230
+    single_cp  0.730435               1.289421              230
+Fold runtime: 184.6 seconds
+All requested baselines completed successfully.
